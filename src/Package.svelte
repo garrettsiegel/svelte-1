@@ -12,9 +12,6 @@
 		count += 1;
 	}
 
-
-
-  // a const named colors2 that is an array of 10 random hex colors
   const colors = Array.from({length: 10}, () => {
     const r = Math.floor(Math.random() * 255)
     const g = Math.floor(Math.random() * 255)

@@ -10,7 +10,7 @@
 	};
 </script>
 
-<Nested answer={42} />
+
 <Nested />
 
 <Package {...pkg} />
