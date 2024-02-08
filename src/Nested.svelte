@@ -12,12 +12,19 @@
 </script>
 
 <div 
-	on:pointermove={handleMove} 
 	class="box"
+	on:pointermove={(e) => {
+		m = { x: e.clientX, y: e.clientY }
+	}} 
+	
 	class:color-x={m.x > 500}
 	class:color-y={m.y > 200}
 >
 	The cursor is at {m.x} x {m.y}
+
+	<button on:click|once={() => alert('clicked')}>
+		Click me
+	</button>
 </div>
 
 <style>
