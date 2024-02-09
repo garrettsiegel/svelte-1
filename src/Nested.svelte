@@ -1,6 +1,13 @@
 
 
 <script>
+	import { createEventDispatcher } from "svelte"
+	const dispatch = createEventDispatcher()
+
+	function sayHello() {
+		dispatch('message', { text: 'Hello!' })
+	}
+
 	let m = { x: 0, y: 0 };
 
 	function handleMove(event) {
@@ -22,8 +29,8 @@
 >
 	The cursor is at {m.x} x {m.y}
 
-	<button on:click|once={() => alert('clicked')}>
-		Click me
+	<button on:click={sayHello}>
+		Click to say hello
 	</button>
 </div>
 

@@ -8,10 +8,14 @@
 		speed: 'blazing',
 		website: 'https://svelte.dev'
 	};
+
+	function handleMessage(event) {
+		console.log(event.detail.text);
+	}
 </script>
 
 
-<Nested />
+<Nested on:message={handleMessage}/>
 
 <Package {...pkg} />
 
