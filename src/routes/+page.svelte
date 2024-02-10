@@ -1,6 +1,7 @@
 <script>
 	import Nested from '../Nested.svelte';
 	import Package from '../Package.svelte';
+	import Outer from '../Outer.svelte'
 
 	const pkg = {
 		name: 'svelte',
@@ -21,3 +22,5 @@
 
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+
+<Outer />
